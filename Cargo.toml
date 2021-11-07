@@ -1,0 +1,11 @@
+[package]
+
+name = "pwm"
+author = "xiuxiu62 <jacremer@live.com>"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+penrose = "0.2"
+simplelog = "0.8.0"
+tracing = { version = "0.1", features = ["attributes", "log"] }
