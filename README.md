@@ -3,4 +3,4 @@
 A window manager built on top of the rust libary, Penrose. 
 
 ## Dependencies
-- vte3
+- vte3-devel
