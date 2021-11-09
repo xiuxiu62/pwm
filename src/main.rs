@@ -1,5 +1,8 @@
 mod config;
+mod error;
 mod keys;
+
+use crate::error::Result;
 
 use penrose::{
     PenroseError, WindowManager,
@@ -9,7 +12,7 @@ use penrose::{
 };
 use simplelog::{LevelFilter, SimpleLogger};
 
-use std::{collections::HashMap, error::Error};
+use std::collections::HashMap;
 
 pub const WORKSPACES: [char; 5] = ['1', '2', '3', '4', '5'];
 pub const FLOATING_CLASSES: [&str; 4] = ["dmenu", "rofi", "dunst", "polybar"];
@@ -21,7 +24,7 @@ pub const LAUNCHER: &str = "rofi";
 pub const FILE_MANAGER: &str = "thunar";
 pub const BROWSER: &str = "firefox";
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<()> {
     SimpleLogger::init(LevelFilter::Debug, simplelog::Config::default())
         .expect("Failed to initialize logger");
 
