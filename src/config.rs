@@ -8,13 +8,15 @@ use penrose::{
     },
 };
 
+use crate::WORKSPACES;
+
 pub fn gen_config() -> Result<Config, String> {
     let mut config_builder = Config::default().builder();
     config_builder
-        .workspaces(crate::WORKSPACES)
-        .bar_height(32)
+        .workspaces(WORKSPACES)
+        .bar_height(24)
         .border_px(0)
-        .gap_px(10);
+        .gap_px(5);
 
     let n_main = 1;
     let ratio = 0.6;
