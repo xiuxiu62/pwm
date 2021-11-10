@@ -14,7 +14,8 @@ pub fn gen_config() -> Result<Config, String> {
         .workspaces(crate::WORKSPACES)
         .floating_classes(crate::FLOATING_CLASSES)
         .focused_border(crate::FOCUSED_BORDER)
-        .unfocused_border(crate::UNFOCUSED_BORDER);
+        .unfocused_border(crate::UNFOCUSED_BORDER)
+        .bar_height(24);
 
     let n_main = 1;
     let ratio = 0.6;
