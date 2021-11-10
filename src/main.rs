@@ -16,8 +16,6 @@ use std::collections::HashMap;
 
 pub const WORKSPACES: [char; 5] = ['1', '2', '3', '4', '5'];
 pub const FLOATING_CLASSES: [&str; 4] = ["dmenu", "rofi", "dunst", "polybar"];
-pub const FOCUSED_BORDER: u32 = 0xcc241d;
-pub const UNFOCUSED_BORDER: u32 = 0x3c3836;
 
 pub const TERMINAL: &str = "alacritty";
 pub const LAUNCHER: &str = "rofi";

@@ -12,10 +12,9 @@ pub fn gen_config() -> Result<Config, String> {
     let mut config_builder = Config::default().builder();
     config_builder
         .workspaces(crate::WORKSPACES)
-        .floating_classes(crate::FLOATING_CLASSES)
-        .focused_border(crate::FOCUSED_BORDER)
-        .unfocused_border(crate::UNFOCUSED_BORDER)
-        .bar_height(24);
+        .bar_height(32)
+        .border_px(0)
+        .gap_px(10);
 
     let n_main = 1;
     let ratio = 0.6;
